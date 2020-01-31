@@ -14,6 +14,7 @@ export const Owner = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 
   a {
     color: #7159c1;
@@ -42,9 +43,7 @@ export const Owner = styled.header`
 `;
 
 export const IssueList = styled.div`
-  padding-top: 30px;
   margin-top: 30px;
-  border-top: 1px solid #eee;
   list-style: none;
 
   li {
@@ -98,5 +97,45 @@ export const IssueList = styled.div`
         color: #999;
       }
     }
+  }
+`;
+
+export const IssueFilter = styled.div`
+  padding: 30px 10px;
+  border-top: 1px solid #eee;
+  button {
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+
+    &:nth-child(${props => props.active + 1}) {
+      background: #7159c1;
+      color: white;
+    }
+  }
+`;
+
+export const PageActions = styled.div`
+  padding: 30px 10px;
+  button {
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+
+    &:disabled {
+      color: #ccc;
+      cursor: default;
+    }
+  }
+
+  span {
+    background: #7159c1;
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
   }
 `;
